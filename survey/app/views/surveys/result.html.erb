@@ -1,0 +1,23 @@
+
+<p>Thanks for submitting this form! You have submitted this form <%= session['visits']%> times now</p>
+
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Location</td>
+      <td>Language</td>
+      <td>Comment</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @user.name %></td>
+      <td><%= @user.location %></td>
+      <td><%= @user.language %></td>
+      <td><%= @user.comment %></td>
+    </tr>
+  </tbody>
+</table>
+
+<a href="/back"><button>Back</button></a>

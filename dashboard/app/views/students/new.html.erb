@@ -1,0 +1,20 @@
+<form action="/dojos/<%= @dojo.id %>/students" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    First Name:
+    <input type="text" name="first_name">
+    Last Name
+    <input type="text" name="last_name">
+    Email
+    <input type="text" name="email">
+    Dojo Branch:
+    <select name="id">
+  <option selected value="<%= @dojo.id %>"><%= @dojo.branch %></option>
+  <% @dojos.each do |dojo| %>
+  <option value="<%= dojo.id %>"><%= dojo.branch %></option>
+  <% end %>
+  </select>
+
+    <input type='submit' value='Create'>
+</form>
+
+  <a href="">Go Back</a>

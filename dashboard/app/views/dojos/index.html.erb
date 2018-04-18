@@ -1,0 +1,25 @@
+<h1> Listing <%= @total %> Dojos</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Coding Dojo Branch</td>
+      <td>Street</td>
+      <td>City</td>
+      <td>State</td>
+      <td> Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @dojos.each do |dojo| %>
+    <tr>
+      <td><%= dojo.branch %></td>
+      <td><%= dojo.street %></td>
+      <td><%= dojo.city %></td>
+      <td><%= dojo.state %></td>
+      <td> <a href="/show/<%= dojo.id %>">Show</a> <a href="/edit/<%= dojo.id %>">Edit</a> <a href="/delete/<%= dojo.id %>">Delete</a> </td>
+    </tr>
+  <% end %>
+  </tbody>
+
+  <a href="/new">Add a new branch</a>
+</table>

@@ -1,0 +1,17 @@
+<h1> Information about: </h1>
+
+    <h4>Branch:
+      <%= @dojo.branch %>
+      Street:
+      <%= @dojo.street %>
+      City:
+      <%= @dojo.city %>
+      State:
+      <%= @dojo.state %>
+    </h4>
+
+    <a href="/">Go Back</a>
+
+    <a href="/edit/<%= @dojo.id %>">Edit</a>
+
+    <a href="/dojos/<%= @dojo.id %>/students"> Show Student Roster</a>

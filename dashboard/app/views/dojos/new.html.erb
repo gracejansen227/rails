@@ -1,0 +1,15 @@
+<form action="/create" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    Branch:
+    <input type="text" name="branch">
+    Street:
+    <input type="text" name="street">
+    City:
+    <input type="text" name="city">
+    State:
+    <input type="text" name="state">
+
+    <input type='submit' value='Create'>
+</form>
+
+  <a href="">Go Back</a>
